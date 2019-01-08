@@ -1,0 +1,18 @@
+dubbo:
+  application:
+    name: nice-cms-provider
+    version: 1.0.0
+    id: nice-cms-provider
+    qos-port: 10041
+    qos-enable: true
+  registry:
+    address: zookeeper://119.29.14.188:2181
+    protocol: zookeeper
+    id: nice
+  protocol:
+    name: dubbo
+    port: 20880
+    id: dubbo
+    status: server
+  provider:
+    timeout: 600000

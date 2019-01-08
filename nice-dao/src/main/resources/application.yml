@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:mysql://129.28.86.140/shopping?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+    username: root
+    password: nice
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:com/nice/mapper/*.xml
+  type-aliases-package: com.nice.domain
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    com:
+      nice: debug
+mapper:
+  identity: MYSQL
+  mappers: tk.mybatis.mapper.common.BaseMapper
+  not-empty: true
+  enum-as-simple-type: true
+pagehelper:
+  helper-dialect: mysql
+  params: count=countSql
+  reasonable: false
+  support-methods-arguments: true
